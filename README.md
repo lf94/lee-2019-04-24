@@ -62,6 +62,7 @@ Jest and Enzyme are used to write component tests. The reason I went with this s
 
 #### Returns
 `200` status code and a `{ files: [ { name: string, sizeInBytes: number, id: string } ]}` object.
+
 `400` status code on error and a `{ message }` object explaining the failure.
 
 ### POST /documents
@@ -70,6 +71,7 @@ The image file to upload to the server.
 
 #### Returns
 `200` status code and a `{ name: string, sizeInBytes: number, id: string }` object.
+
 `400` status code on error and a `{ message }` object explaining the failure.
 
 ### DELETE /documents/:id
@@ -79,6 +81,7 @@ The image file to upload to the server.
 
 #### Returns
 `200` status code on success.
+
 `400` status code on error and a `{ message }` object explaining the failure.
 
 ## Other notes
