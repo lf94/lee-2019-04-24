@@ -1,0 +1,65 @@
+.document-tile {
+  font-family: $primary-font;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  border: 0.05rem solid $black;
+  padding: 1rem;
+  border-radius: 0.1rem;
+
+  &:hover {
+    border-color: $purple;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    flex-grow: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    padding-bottom: 0.5em;
+  }
+
+  &__size {
+    font-size: 0.8em;
+  }
+
+  &__delete {
+    & > button {
+      @extend %default-button;
+      background-color: $red;
+    }
+  }
+
+  &__processing-overlay {
+    position: relative;
+    width: 100%;
+    top: -1rem;
+    left: -1rem;
+    padding-right: 2rem;
+
+    & > div {
+      position: absolute;
+      width: 100%;
+      background-color: rgba(231, 231, 231, 0.46);
+      z-index: 10;
+      height: 104px;
+
+      & > div {
+        @extend %loader-lukehaas-dots;
+        top: 48px;
+        margin: auto;
+        color: #5848d5;
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  &-bar {
+    display: flex;
+    align-items: center;
+
+    & > .info {
+      flex-grow: 1;
+    }
+  }
+}

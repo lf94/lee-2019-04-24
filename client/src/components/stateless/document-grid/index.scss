@@ -1,0 +1,35 @@
+.document-grid {
+  &-info {
+    font-family: $primary-font;
+    display: flex;
+    align-items: baseline;
+    padding: 0 1em 1em 0.5em;
+
+    &__total-files {
+      font-size: 2em;
+      flex-grow: 1;
+    }
+
+    &__total-files-size {
+      font-size: 1.25em;
+    }
+  }
+
+  &__loading-indicator {
+    @extend %loader-lukehaas-dots;
+    color: $purple;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  &-tiles {
+    display: grid;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    grid-template-columns: auto auto auto;
+
+    @media #{$mobile-descriptor} {
+      grid-template-columns: auto;
+    }
+  }
+}
