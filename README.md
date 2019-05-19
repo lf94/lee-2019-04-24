@@ -1,5 +1,3 @@
-# Lee Fallat - 2019-04-24
-
 ## Installation
 
 Please make sure you have the latest `npm` and `node` installed. I prefer to use `nvm` to manage multiple versions of these software. You can find the installation instructions [here](https://github.com/creationix/nvm#installation-and-update).
